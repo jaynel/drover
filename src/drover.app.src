@@ -1,0 +1,30 @@
+%%%------------------------------------------------------------------------------
+%%% @copyright (c) 2015, DuoMark International, Inc.
+%%% @author Jay Nelson <jay@duomark.com> [http://duomark.com/]
+%%% @reference 2015 Development sponsored by TigerText, Inc. [http://tigertext.com/]
+%%% @reference The license is based on the template for Modified BSD from
+%%%   <a href="http://opensource.org/licenses/BSD-3-Clause">OSI</a>
+%%% @doc
+%%%   Functions that Makefile can invoke from erl -s which returns things
+%%%   like the OTP Release.
+%%%
+%%% @since 0.0.1
+%%% @end
+%%%------------------------------------------------------------------------------
+
+%% -*- mode: erlang -*-
+%% -*- tab-width: 4;erlang-indent-level: 4;indent-tabs-mode: nil -*-
+%% ex: ts=4 sw=4 et
+
+{application, drover,
+ [
+  {description, "DROVER: Concurrent manager of Cowboy requests"},
+  {vsn, "0.0.1"},
+  {id, "git"},
+  {modules, []},
+  {registered, [drover_sup]},
+  {applications, [kernel, stdlib]},
+  {included_applications, [cowboy, epocxy, vbisect]},
+  {mod, {drover_app, []}},
+  {env, []}
+ ]}.
